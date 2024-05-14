@@ -14,9 +14,9 @@ cd ..
 
 cd datasheet_zh
 # https://www.wch.cn/downloads/CH32X035DS0_PDF.html
-wget --continue https://www.wch-ic.com/downloads/file/443.html -O CH32X035DS0.PDF
+wget --continue https://www.wch.cn/downloads/file/443.html -O CH32X035DS0.PDF
 # https://www.wch.cn/downloads/CH32X035RM_PDF.html
-wget --continue https://www.wch-ic.com/downloads/file/445.html -O CH32X035RM.PDF
+wget --continue https://www.wch.cn/downloads/file/445.html -O CH32X035RM.PDF
 cd ..
 
 # https://www.wch.cn/downloads/CH32X035EVT_ZIP.html
