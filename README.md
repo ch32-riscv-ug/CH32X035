@@ -4,7 +4,7 @@
 | PA19  | PA18  | PA10 | PA10 | PA2  | PA3  | PB3  | PB4  | PB0  | PB1  |
 
 ## Official Site
-- https://www.wch-ic.com/products/CH32VX035.html
+- https://www.wch-ic.com/products/CH32X035.html
 - https://www.wch.cn/products/CH32X035.html
 
 ## System Block Diagram
@@ -17,13 +17,13 @@
 <table>
     <thead>
         <tr>
-            <th>CH32<br>X035<br>R8T6<br>LQFP64M</th>
-            <th>CH32<br>X035<br>C8T6<br>LQFP48</th>
-            <th>CH32<br>X035<br>G8U6<br>QFN28</th>
-            <th>CH32<br>X035<br>G8R6<br>QSOP28</th>
-            <th>CH32<br>X035<br>F8U6<br>QFN20</th>
-            <th>CH32<br>X035<br>F7P6<br>TSSOP20</th>
-            <th>CH32<br>X033<br>F8P6<br>TSSOP20</th>
+            <th>CH32<br>X035<br>R8T6<br>(LQFP<br>64M)</th>
+            <th>CH32<br>X035<br>C8T6<br>(LQFP<br>48)</th>
+            <th>CH32<br>X035<br>G8U6<br>(QFN<br>28)</th>
+            <th>CH32<br>X035<br>G8R6<br>(QSOP<br>28)</th>
+            <th>CH32<br>X035<br>F8U6<br>(QFN<br>20)</th>
+            <th>CH32<br>X035<br>F7P6<br>(TSSOP<br>20)</th>
+            <th>CH32<br>X033<br>F8P6<br>(TSSOP<br>20)</th>
             <th>Pin name</th>
             <th>Pin type</th>
             <th>Main function<br>(after reset)</th>
