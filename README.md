@@ -7,6 +7,10 @@
 - https://www.wch-ic.com/products/CH32X035.html
 - https://www.wch.cn/products/CH32X035.html
 
+## Datasheet
+- en [[CH32X035DS0.PDF](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF)] [[CH32X035RM.PDF](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035RM.PDF)]
+- zh [[CH32X035DS0.PDF](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF)] [[CH32X035RM.PDF](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035RM.PDF)]
+
 ## System Block Diagram
 <img src="image/system_CH32X035.png" />
 
