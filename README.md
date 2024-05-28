@@ -21,16 +21,16 @@
 <table>
     <thead>
         <tr>
-            <th>CH32<br>X035<br>R8T6<br>(LQFP<br>64M)</th>
-            <th>CH32<br>X035<br>C8T6<br>(LQFP<br>48)</th>
-            <th>CH32<br>X035<br>G8U6<br>(QFN<br>28)</th>
-            <th>CH32<br>X035<br>G8R6<br>(QSOP<br>28)</th>
-            <th>CH32<br>X035<br>F8U6<br>(QFN<br>20)</th>
-            <th>CH32<br>X035<br>F7P6<br>(TSSOP<br>20)</th>
-            <th>CH32<br>X033<br>F8P6<br>(TSSOP<br>20)</th>
+            <th>CH32&#8203;X035&#8203;R8T6&#8203;(LQFP&#8203;64M)</th>
+            <th>CH32&#8203;X035&#8203;C8T6&#8203;(LQFP&#8203;48)</th>
+            <th>CH32&#8203;X035&#8203;G8U6&#8203;(QFN&#8203;28)</th>
+            <th>CH32&#8203;X035&#8203;G8R6&#8203;(QSOP&#8203;28)</th>
+            <th>CH32&#8203;X035&#8203;F8U6&#8203;(QFN&#8203;20)</th>
+            <th>CH32&#8203;X035&#8203;F7P6&#8203;(TSSOP&#8203;20)</th>
+            <th>CH32&#8203;X033&#8203;F8P6&#8203;(TSSOP&#8203;20)</th>
             <th>Pin name</th>
             <th>Pin type</th>
-            <th>Main function<br>(after reset)</th>
+            <th>Main function&#8203;(after reset)</th>
             <th>Note</th>
         </tr>
     </thead>
