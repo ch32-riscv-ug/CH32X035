@@ -1,7 +1,7 @@
 # CH32X035/CH32X033
 | SWCLK | SWDIO | TX1  | RX1  | TX2  | RX2  | TX3  | RX3  | TX4  | RX4  |
 |-------|-------|------|------|------|------|------|------|------|------|
-| PA19  | PA18  | PA10 | PA10 | PA2  | PA3  | PB3  | PB4  | PB0  | PB1  |
+| PA19  | PA18  | PA10 | PA11 | PA2  | PA3  | PB3  | PB4  | PB0  | PB1  |
 
 ## Official Site
 - https://www.wch-ic.com/products/CH32X035.html
