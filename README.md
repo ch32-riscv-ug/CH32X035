@@ -818,5 +818,9 @@
     </tbody>
 </table>
 
+## Errata
+- Channel 3, channel 7, channel 11, channel 15 and I2C functions of the ADC are not available for products
+with a lot number with a penultimate 5 digit of 0;
+
 ## System Architecture
 <img src="image/architecture_CH32X035.png" />
