@@ -3,6 +3,16 @@
 |-------|-------|------|------|------|------|------|------|------|------|
 | PA19  | PA18  | PB10 | PB11 | PA2  | PA3  | PB3  | PB4  | PB0  | PB1  |
 
+Pin Alternate Functions
+[[ALL](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035)]
+[[ADC](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035&features=ADC)]
+[[I2C](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035&features=I2C)]
+[[SPI](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035&features=SPI)]
+[[SYS](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035&features=SYS)]
+[[TIM](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035&features=TIM)]
+[[UART/USART](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035&features=ART)]
+[[USB](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035&features=USB)]
+
 ## Official Site
 - https://www.wch-ic.com/products/CH32X035.html
 - https://www.wch.cn/products/CH32X035.html
