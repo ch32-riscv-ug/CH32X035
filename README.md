@@ -1,7 +1,7 @@
 # CH32X035/CH32X033
 | SWCLK | SWDIO | TX1  | RX1  | TX2  | RX2  | TX3  | RX3  | TX4  | RX4  |
 |-------|-------|------|------|------|------|------|------|------|------|
-| PA19  | PA18  | PB10 | PB11 | PA2  | PA3  | PB3  | PB4  | PB0  | PB1  |
+| PC19  | PC18  | PB10 | PB11 | PA2  | PA3  | PB3  | PB4  | PB0  | PB1  |
 
 Pin Alternate Functions
 [[ALL](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32X035)]
