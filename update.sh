@@ -7,9 +7,9 @@ git pull
 # https://www.wch-ic.com/products/CH32X035.html
 cd datasheet_en
 # https://www.wch-ic.com/downloads/CH32X035DS0_PDF.html
-curl -z CH32X035DS0.PDF -o CH32X035DS0.PDF https://www.wch-ic.com/downloads/file/381.html
+curl -z CH32X035DS0.PDF -o CH32X035DS0.PDF https://www.wch-ic.com/download/file?id=381
 # https://www.wch-ic.com/downloads/CH32X035RM_PDF.html
-curl -z CH32X035RM.PDF -o CH32X035RM.PDF https://www.wch-ic.com/downloads/file/382.html
+curl -z CH32X035RM.PDF -o CH32X035RM.PDF https://www.wch-ic.com/download/file?id=382
 cd ..
 
 cd datasheet_zh
