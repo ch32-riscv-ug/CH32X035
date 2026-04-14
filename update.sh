@@ -14,13 +14,13 @@ cd ..
 
 cd datasheet_zh
 # https://www.wch.cn/downloads/CH32X035DS0_PDF.html
-curl -z CH32X035DS0.PDF -o CH32X035DS0.PDF https://www.wch.cn/download/file?id=443
+curl -z CH32X035DS0.PDF -o CH32X035DS0.PDF https://file.wch.cn/download/file?id=443
 # https://www.wch.cn/downloads/CH32X035RM_PDF.html
-curl -z CH32X035RM.PDF -o CH32X035RM.PDF https://www.wch.cn/download/file?id=445
+curl -z CH32X035RM.PDF -o CH32X035RM.PDF https://file.wch.cn/download/file?id=445
 cd ..
 
 # https://www.wch.cn/downloads/CH32X035EVT_ZIP.html
-curl -z CH32X035EVT.ZIP -o CH32X035EVT.ZIP https://www.wch.cn/download/file?id=444
+curl -z CH32X035EVT.ZIP -o CH32X035EVT.ZIP https://file.wch.cn/download/file?id=444
 rm -rfv EVT
 unzip -O GB2312 *.ZIP
 
