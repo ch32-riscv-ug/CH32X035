@@ -4,10 +4,10 @@
 
 ## Series
 
-| Series | Core | ISA | Flash | SRAM | Packages | Products | Official |
-|---|---|---|---|---|---|---|---|
-| **CH32X033** | QingKe V4C | RV32IMAC | 62K | 20K | TSSOP20 | 1 | [en](https://www.wch-ic.com/products/CH32X033.html) / [zh](https://www.wch.cn/products/CH32X033.html) |
-| **CH32X035** | QingKe V4C | RV32IMAC | 62K | 20K | LQFP48,LQFP64M,QFN12,QFN20,QFN28,QSOP28,TSSOP20 | 7 | [en](https://www.wch-ic.com/products/CH32X035.html) / [zh](https://www.wch.cn/products/CH32X035.html) |
+| Series | Core | ISA | Flash | SRAM | Max clock | VDD | Packages | Products | Official |
+|---|---|---|---|---|---|---|---|---|---|
+| **CH32X033** | QingKe V4C | RV32IMAC | 62K | 20K | 48 MHz | 2.0-5.5V | TSSOP20 | 1 | [en](https://www.wch-ic.com/products/CH32X033.html) / [zh](https://www.wch.cn/products/CH32X033.html) |
+| **CH32X035** | QingKe V4C | RV32IMAC | 62K | 20K | 48 MHz | 2.0-5.5V | LQFP48,LQFP64M,QFN12,QFN20,QFN28,QSOP28,TSSOP20 | 7 | [en](https://www.wch-ic.com/products/CH32X035.html) / [zh](https://www.wch.cn/products/CH32X035.html) |
 
 ## Debug / serial defaults
 
@@ -263,7 +263,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 ## Errata
 
-- Channel 3, channel 7, channel 11, channel 15 and I2C functions of the ADC are not available. *(applies: CH32X033, CH32X035; penultimate digit of lot number = 0)*
+- ADC channels 3, 7, 11 and 15, and the I2C function, are not available. *(applies: CH32X033, CH32X035; 5th-to-last digit of lot number = 0)*
+- The PC10/PC17 and PC11/PC16 pin pairs are internally bonded together; both IOs of a pair must not be configured as outputs at the same time. *(applies: CH32X033, CH32X035; except CH32X035F8U6 and CH32X035D8U6)*
 
 ## Diagrams
 
