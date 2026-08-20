@@ -4,7 +4,7 @@
 
 ## Series
 
-| Series | Core | ISA | Flash | SRAM | Max clock | VDD | Packages | Products | Official |
+| Series | Core | ISA | Flash | SRAM | Clock | VDD | Packages | Products | Official |
 |---|---|---|---|---|---|---|---|---|---|
 | **CH32X033** | QingKe V4C | RV32IMAC | 62K | 20K | 48 MHz | 2.0-5.5V | TSSOP20 | 1 | [en](https://www.wch-ic.com/products/CH32X033.html) / [zh](https://www.wch.cn/products/CH32X033.html) |
 | **CH32X035** | QingKe V4C | RV32IMAC | 62K | 20K | 48 MHz | 2.0-5.5V | LQFP48,LQFP64M,QFN12,QFN20,QFN28,QSOP28,TSSOP20 | 7 | [en](https://www.wch-ic.com/products/CH32X035.html) / [zh](https://www.wch.cn/products/CH32X035.html) |
@@ -23,6 +23,21 @@
 | CH32X035DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) v2.2 | [page](https://www.wch.cn/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) v2.2 |
 | CH32X035RM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035RM.PDF) v1.9 | [page](https://www.wch.cn/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035RM.PDF) v1.9 |
 | CH32X035EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32X035EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT) v2.1 |
+
+## Pinouts
+
+Pinout drawings are in the datasheet (chapter *Pinouts*):
+
+| Package | Products | Datasheet | Outline |
+|---|---|---|---|
+| TSSOP20 | CH32X033F8P6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_TSSOP20.png) |
+| LQFP48 | CH32X035C8T6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP48.png) |
+| QFN12 | CH32X035D8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN12.png) |
+| TSSOP20 | CH32X035F7P6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_TSSOP20.png) |
+| QFN20 | CH32X035F8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN20.png) |
+| QSOP28 | CH32X035G8R6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QSOP28.png) |
+| QFN28 | CH32X035G8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN28.png) |
+| LQFP64M | CH32X035R8T6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP64M.png) |
 
 ## Product comparison
 
@@ -244,38 +259,47 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 | Series | Field | Register | Bits | Values | Reset |
 |---|---|---|---|---|---|
-| CH32X033 | I2C1_REMAP | PCFR1 | 2;3;4 | 0;1;2;3;4;5;6;7 | 0 |
-| CH32X033 | PIOC_REMAP | PCFR1 | 23 | 0;1 | 0 |
-| CH32X033 | TIM2_REMAP | PCFR1 | 18;19;20 | 0;1;2;3;4;5;6;7 | 0 |
-| CH32X033 | TIM3_REMAP | PCFR1 | 21;22 | 0;1;2;3 | 0 |
-| CH32X033 | USART2_REMAP | PCFR1 | 7;8;9 | 0;1;2;3;4;5;6;7 | 0 |
-| CH32X033 | USART4_REMAP | PCFR1 | 12;13;14 | 0;1;3;4;5;6;7 | 0 |
-| CH32X035 | I2C1_REMAP | PCFR1 | 2;3;4 | 0;1;2;3;4;5;6;7 | 0 |
-| CH32X035 | PIOC_REMAP | PCFR1 | 23 | 0;1 | 0 |
-| CH32X035 | SPI1_REMAP | PCFR1 | 0;1 | 0;1;2;3 |  |
-| CH32X035 | TIM2_REMAP | PCFR1 | 18;19;20 | 0;1;2;3;4;5;6;7 | 0 |
-| CH32X035 | TIM3_REMAP | PCFR1 | 21;22 | 0;1;2;3 | 0 |
-| CH32X035 | USART2_REMAP | PCFR1 | 7;8;9 | 0;1;2;3;4;5;6;7 | 0 |
-| CH32X035 | USART3_REMAP | PCFR1 | 10;11 | 0;1;2;3 | 0 |
-| CH32X035 | USART4_REMAP | PCFR1 | 12;13;14 | 0;1;3;4;5;6;7 | 0 |
+| CH32X033 | I2C1_REMAP | PCFR1 | PCFR1:2;PCFR1:3;PCFR1:4 | 0;1;2;3;4;5;6;7 | 0 |
+| CH32X033 | PIOC_REMAP | PCFR1 | PCFR1:23 | 0;1 | 0 |
+| CH32X033 | SPI1_REMAP | PCFR1 | PCFR1:0;PCFR1:1 | 0;1;2;3 |  |
+| CH32X033 | TIM1_REMAP | PCFR1 | PCFR1:15;PCFR1:16;PCFR1:17 | 0;1;2;3;4 | 0 |
+| CH32X033 | TIM2_REMAP | PCFR1 | PCFR1:18;PCFR1:19;PCFR1:20 | 0;1;2;3;4;5;6;7 | 0 |
+| CH32X033 | TIM3_REMAP | PCFR1 | PCFR1:21;PCFR1:22 | 0;1;2;3 | 0 |
+| CH32X033 | USART1_REMAP | PCFR1 | PCFR1:5;PCFR1:6 | 0;1;3 | 0 |
+| CH32X033 | USART2_REMAP | PCFR1 | PCFR1:7;PCFR1:8;PCFR1:9 | 0;1;2;3;4;5;6;7 | 0 |
+| CH32X033 | USART3_REMAP | PCFR1 | PCFR1:10;PCFR1:11 | 0;1;2;3 | 0 |
+| CH32X033 | USART4_REMAP | PCFR1 | PCFR1:12;PCFR1:13;PCFR1:14 | 0;1;2;3;4;5;6;7 | 0 |
+| CH32X035 | I2C1_REMAP | PCFR1 | PCFR1:2;PCFR1:3;PCFR1:4 | 0;1;2;3;4;5;6;7 | 0 |
+| CH32X035 | PIOC_REMAP | PCFR1 | PCFR1:23 | 0;1 | 0 |
+| CH32X035 | SPI1_REMAP | PCFR1 | PCFR1:0;PCFR1:1 | 0;1;2;3 |  |
+| CH32X035 | TIM1_REMAP | PCFR1 | PCFR1:15;PCFR1:16;PCFR1:17 | 0;1;2;3;4 | 0 |
+| CH32X035 | TIM2_REMAP | PCFR1 | PCFR1:18;PCFR1:19;PCFR1:20 | 0;1;2;3;4;5;6;7 | 0 |
+| CH32X035 | TIM3_REMAP | PCFR1 | PCFR1:21;PCFR1:22 | 0;1;2;3 | 0 |
+| CH32X035 | USART1_REMAP | PCFR1 | PCFR1:5;PCFR1:6 | 0;1;2;3 | 0 |
+| CH32X035 | USART2_REMAP | PCFR1 | PCFR1:7;PCFR1:8;PCFR1:9 | 0;1;2;3;4;5;6;7 | 0 |
+| CH32X035 | USART3_REMAP | PCFR1 | PCFR1:10;PCFR1:11 | 0;1;2;3 | 0 |
+| CH32X035 | USART4_REMAP | PCFR1 | PCFR1:12;PCFR1:13;PCFR1:14 | 0;1;2;3;4;5;6;7 | 0 |
 
 </details>
+
+## Block diagrams
+
+### CH32X033
+<img src="image/architecture_CH32X033.png" alt="CH32X033 block diagram" />
+
+### CH32X035
+<img src="image/architecture_CH32X035.png" alt="CH32X035 block diagram" />
 
 ## Errata
 
 - ADC channels 3, 7, 11 and 15, and the I2C function, are not available. *(applies: CH32X033, CH32X035; 5th-to-last digit of lot number = 0)*
 - The PC10/PC17 and PC11/PC16 pin pairs are internally bonded together; both IOs of a pair must not be configured as outputs at the same time. *(applies: CH32X033, CH32X035; except CH32X035F8U6 and CH32X035D8U6)*
 
-## Diagrams
+## EVT examples
 
-### system CH32X035
-<img src="image/system_CH32X035.png" />
+108 routines in [EVT/EXAM](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM):
 
-### product CH32X035
-<img src="image/product_CH32X035.jpg" />
-
-### architecture CH32X035
-<img src="image/architecture_CH32X035.png" />
+[ADC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/ADC) 5 · [APPLICATION](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/APPLICATION) 1 · [DMA](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/DMA) 2 · [EXTI](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/EXTI) 1 · [FLASH](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/FLASH) 2 · [FreeRTOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/FreeRTOS) 1 · [GPIO](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/GPIO) 1 · [HarmonyOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/HarmonyOS) 1 · [I2C](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/I2C) 6 · [IAP](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/IAP) 1 · [INT](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/INT) 1 · [IWDG](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/IWDG) 1 · [OPA](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/OPA) 8 · [PIOC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PIOC) 18 · [PMP](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PMP) 1 · [PWR](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PWR) 5 · [RCC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RCC) 2 · [RT-Thread](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RT-Thread) 2 · [RunInRam](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RunInRam) 1 · [SDI_Printf](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/SDI_Printf) 1 · [SPI](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/SPI) 6 · [TIM](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TIM) 13 · [TOUCHKEY](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TOUCHKEY) 1 · [TencentOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TencentOS) 1 · [USART](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USART) 10 · [USB](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USB) 13 · [USBPD](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USBPD) 2 · [WWDG](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/WWDG) 1
 
 ---
 Data: [ch32-device-data](https://github.com/ch32-riscv-ug/ch32-device-data) (tables/ -- each value carries its evidence and confidence there).
