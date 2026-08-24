@@ -2,6 +2,17 @@
 
 <!-- This file is generated from ch32-riscv-ug/ch32-device-data (tables/ + tools/build_readme.py). Edit there, not here. -->
 
+## Quick start
+
+Programming and debug: **2-wire SDI** (WCH-Link, `Serial Debug Interface`).
+
+### Debug / serial defaults
+
+| Series | SWDIO | SWCLK | UART TX | UART RX |
+|---|---|---|---|---|
+| CH32X033 | PC18 | PC19 | PA2 (USART2); PB0 (USART4) | PA3 (USART2); PB1 (USART4) |
+| CH32X035 | PC18 | PC19 | PB10 (USART1); PA2 (USART2) | PB11 (USART1); PA3 (USART2) |
+
 ## Series
 
 | Series | Core | ISA | Flash | SRAM | Clock | VDD | Packages | Products | Official |
@@ -9,20 +20,29 @@
 | **CH32X033** | QingKe V4C | RV32IMAC | 62K | 20K | 48 MHz | 2.0-5.5V | TSSOP20 | 1 | [en](https://www.wch-ic.com/products/CH32X033.html) / [zh](https://www.wch.cn/products/CH32X033.html) |
 | **CH32X035** | QingKe V4C | RV32IMAC | 62K | 20K | 48 MHz | 2.0-5.5V | LQFP48,LQFP64M,QFN12,QFN20,QFN28,QSOP28,TSSOP20 | 7 | [en](https://www.wch-ic.com/products/CH32X035.html) / [zh](https://www.wch.cn/products/CH32X035.html) |
 
-## Debug / serial defaults
+## Product comparison
 
-| Series | SWDIO | SWCLK | UART TX | UART RX |
-|---|---|---|---|---|
-| CH32X033 | - | - | - | - |
-| CH32X035 | - | - | PB10 | PB11 |
+### CH32X035 product comparison
 
-## Documents
-
-| Document | Kind | English | 中文 |
-|---|---|---|---|
-| CH32X035DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) v2.2 | [page](https://www.wch.cn/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) v2.2 |
-| CH32X035RM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035RM.PDF) v1.9 | [page](https://www.wch.cn/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035RM.PDF) v1.9 |
-| CH32X035EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32X035EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT) v2.1 |
+| | CH32X035&#8203;C8T6&#8203;(LQFP48) | CH32X035&#8203;D8U6&#8203;(QFN12) | CH32X035&#8203;F7P6&#8203;(TSSOP20) | CH32X035&#8203;F8U6&#8203;(QFN20) | CH32X035&#8203;G8R6&#8203;(QSOP28) | CH32X035&#8203;G8U6&#8203;(QFN28) | CH32X035&#8203;R8T6&#8203;(LQFP64M) |
+|---|---|---|---|---|---|---|---|
+| **Flash** | 62K | 62K | 62K | 62K | 62K | 62K | 62K |
+| **SRAM** | 20K | 20K | 20K | 20K | 20K | 20K | 20K |
+| **GPIO** | 46 | 11 | 18 | 19 | 26 | 27 | 60 |
+| **Temperature** | -40..85C | -40..85C | -40..85C | -40..85C | -40..85C | -40..85C | -40..85C |
+| Advanced-control timer | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| General-purpose timer | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| Serial port | 4 | 3 | 3 | 3 | 4 | 4 | 4 |
+| Watchdog | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| PDUSB USB Host | √ | - | - | - | √ | √ | √ |
+| USB Device | √ | √ | √ | √ | √ | √ | √ |
+| DRP | √ | √ | √ | √ | √ | √ | √ |
+| ADC | 10+1 | 5+1 | 11+1 | 10+1 | 11+1 | 12+1 | 14+1 |
+| OPA | 2 | 1 | 1 | 2 | 2 | 2 | 2 |
+| CMP | 3 | - | 1 | - | 3 | 1 | 3 |
+| Capacitive Touchkey | 10 | 5 | 11 | 10 | 11 | 12 | 14 |
+| SPI | √ | √ | √ | √ | √ | √ | √ |
+| PIOC 1-wire interface | √ | √ | √ | √ | √ | √ | √ |
 
 ## Pinouts
 
@@ -39,30 +59,6 @@ Pinout drawings are in the datasheet (chapter *Pinouts*):
 | QFN28 | CH32X035G8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN28.png) |
 | LQFP64M | CH32X035R8T6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP64M.png) |
 
-## Product comparison
-
-### CH32X035 product comparison
-
-| | CH32X035&#8203;C8T6&#8203;(LQFP48) | CH32X035&#8203;D8U6&#8203;(QFN12) | CH32X035&#8203;F7P6&#8203;(TSSOP20) | CH32X035&#8203;F8U6&#8203;(QFN20) | CH32X035&#8203;G8R6&#8203;(QSOP28) | CH32X035&#8203;G8U6&#8203;(QFN28) | CH32X035&#8203;R8T6&#8203;(LQFP64M) |
-|---|---|---|---|---|---|---|---|
-| **Flash** | 62K | 62K | 62K | 62K | 62K | 62K | 62K |
-| **SRAM** | 20K | 20K | 20K | 20K | 20K | 20K | 20K |
-| **GPIO** | 46 | 11 | 18 | 19 | 26 | 27 | 60 |
-| **Temperature** | -40..85C | -40..85C | -40..85C | -40..85C | -40..85C | -40..85C | -40..85C |
-| ADC | 10+1 | 5+1 | 11+1 | 10+1 | 11+1 | 12+1 | 14+1 |
-| Advanced-control timer | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
-| Capacitive Touchkey | 10 | 5 | 11 | 10 | 11 | 12 | 14 |
-| CMP | 3 | - | 1 | - | 3 | 1 | 3 |
-| General-purpose timer | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
-| OPA | 2 | 1 | 1 | 2 | 2 | 2 | 2 |
-| PDUSB USB Host | √ | - | - | - | √ | √ | √ |
-| PIOC 1-wire interface | √ | √ | √ | √ | √ | √ | √ |
-| Serial port | 4 | 3 | 3 | 3 | 4 | 4 | 4 |
-| SPI | √ | √ | √ | √ | √ | √ | √ |
-| Type-C Source Sink DRP | √ | √ | √ | √ | √ | √ | √ |
-| USB Device | √ | √ | √ | √ | √ | √ | √ |
-| Watchdog | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
-
 ## Pin definitions
 
 ### CH32X033 pin map
@@ -73,8 +69,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 |---|---|---|---|
 | PA0 | I/O/A | 14 |  |
 | PA1 | I/O/A | 15 |  |
-| PA2 | I/O/A | 16 |  |
-| PA3 | I/O/A | 17 |  |
+| PA2 | I/O/A | 16 | UART TX (USART2) |
+| PA3 | I/O/A | 17 | UART RX (USART2) |
 | PA4 | I/O/A | 19 |  |
 | PA5 | I/O/A | 20 |  |
 | PA6 | I/O/A | 1 |  |
@@ -82,14 +78,14 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PA9 | I/O | 10 |  |
 | PA10 | I/O | 12 |  |
 | PA11 | I/O/A | 11 |  |
-| PB0 | I/O/A | 2 |  |
-| PB1 | I/O/A | 3 |  |
+| PB0 | I/O/A | 2 | UART TX (USART4) |
+| PB1 | I/O/A | 3 | UART RX (USART4) |
 | PB7 | I/O/A | 4 |  |
 | PC3 | I/O/A | 13 |  |
 | PC16 | I/O/A | 5 |  |
 | PC17 | I/O/A | 6 |  |
-| PC18 | I/O | 8 |  |
-| PC19 | I/O/A | 18 |  |
+| PC18 | I/O | 8 | SWDIO |
+| PC19 | I/O/A | 18 | SWCLK |
 | GND | P | 7 |  |
 | VDD | P | 9 |  |
 
@@ -104,7 +100,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PA4 | A4, CK2, CS, O2O0 | - | RTS3 | T3C2 | - | - | - |
 | PA5 | A5, O2N0, SCK | TX4 | - | - | CTS4 | - | - |
 | PA6 | A6, MISO, O1N0, T3C1 | CK4, T1BK | - | - | RTS4 | - | - |
-| PA7 | A7, A7(3), MOSI, O2P0, T3C2 | CTS4, T1C1N | - | TX1 | - | - | - |
+| PA7 | A7, MOSI, O2P0, T3C2 | CTS4, T1C1N | - | TX1 | - | - | - |
 | PA9 | - | MOSI, RX4, T2BK | CTS1, MISO | T2BK | - | - | - |
 | PA10 | SCL | TX1 | MOSI | RX4 | - | - | - |
 | PA11 | C2P1, SDA | RX1 | SCK | - | - | - | - |
@@ -127,8 +123,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 |---|---|---|---|---|---|---|---|---|---|
 | PA0 | I/O/A | 10 | - | 6 | 2 | 9 | 5 | 14 |  |
 | PA1 | I/O/A | 11 | - | 7 | 3 | 10 | 6 | 15 |  |
-| PA2 | I/O/A | 12 | 2 | 8 | 4 | 11 | 7 | 16 |  |
-| PA3 | I/O/A | 13 | 3 | 9 | 5 | 12 | 8 | 17 |  |
+| PA2 | I/O/A | 12 | 2 | 8 | 4 | 11 | 7 | 16 | UART TX (USART2) |
+| PA3 | I/O/A | 13 | 3 | 9 | 5 | 12 | 8 | 17 | UART RX (USART2) |
 | PA4 | I/O/A | 14 | - | 10 | 6 | 15 | 9 | 20 |  |
 | PA5 | I/O/A | 15 | 4 | 11 | 7 | 16 | 10 | 21 |  |
 | PA6 | I/O/A | 16 | 5 | 12 | 8 | 13 | 11 | 22 |  |
@@ -149,18 +145,18 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PA21 | I/O | 7 | - | - | - | - | - | 7 |  |
 | PA22 | I/O/A | 8 | - | - | - | - | - | 12 |  |
 | PA23 | I/O/A | 9 | - | - | - | - | - | 13 |  |
-| PB0 | I/O/A | 20 | - | - | 10 | 14 | 13 | 26 |  |
-| PB1 | I/O/A | 21 | - | 14 | 11 | 20 | 16 | 27 |  |
+| PB0 | I/O/A | 20 | - | - | 10 | 14 | 13 | 26 | UART TX (USART4) |
+| PB1 | I/O/A | 21 | - | 14 | 11 | 20 | 16 | 27 | UART RX (USART4) |
 | PB2 | I/O/A | 22 | - | - | - | - | - | 28 |  |
-| PB3 | I/O/A | 23 | - | - | 12 | 18 | 14 | 29 |  |
-| PB4 | I/O/A | 24 | - | - | - | 19 | 15 | 30 |  |
+| PB3 | I/O/A | 23 | - | - | 12 | 18 | 14 | 29 | UART TX (USART3) |
+| PB4 | I/O/A | 24 | - | - | - | 19 | 15 | 30 | UART RX (USART3) |
 | PB5 | I/O/A | 25 | - | - | - | 20 | 16 | 33 |  |
 | PB6 | I/O/A | 26 | - | - | - | 21 | 17 | 34 |  |
 | PB7 | I/O/A | 27 | - | - | - | 22 | 18 | 35 |  |
 | PB8 | I/O/A | 28 | - | - | - | 23 | 19 | 36 |  |
 | PB9 | I/O | 29 | - | - | - | 24 | 20 | 41 |  |
-| PB10 | I/O | 30 | - | - | - | 25 | 21 | 42 | UART TX |
-| PB11 | I/O | 31 | - | - | 13 | 26 | 22 | 43 | UART RX |
+| PB10 | I/O | 30 | - | - | - | 25 | 21 | 42 | UART TX (USART1) |
+| PB11 | I/O | 31 | - | - | 13 | 26 | 22 | 43 | UART RX (USART1) |
 | PB12 | I/O | 35 | - | 1 | 15 | 27 | 23 | 47 |  |
 | PB13 | I/O | 36 | - | - | - | - | - | 48 |  |
 | PB14 | I/O | - | - | - | - | - | - | 50 |  |
@@ -174,7 +170,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PC0 | I/O/A | - | - | - | - | - | 3 | 8 |  |
 | PC1 | I/O/A | - | - | 5 | - | - | - | 9 |  |
 | PC2 | I/O/A | - | - | - | - | - | - | 10 |  |
-| PC3 | I/O/A | - | - | - | - | - | 4 | 11 |  |
+| PC3 | I/O/A | - | - | 4 | - | 8 | 4 | 11 |  |
 | PC4 | I/O | - | - | - | - | - | - | 18 |  |
 | PC5 | I/O | - | - | - | - | - | - | 19 |  |
 | PC6 | I/O | 18 | - | - | - | - | - | 24 |  |
@@ -183,8 +179,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PC15 | I/O/A | 39 | 12 | 3 | 20 | 5 | 1 | 55 |  |
 | PC16 | I/O/A | 32 | 7 | 17 | 17 | 2 | 26 | 44 |  |
 | PC17 | I/O/A | 33 | 8 | 18 | 18 | 3 | 27 | 45 |  |
-| PC18 | I/O | 34 | 9 | 19 | 14 | 28 | 25 | 46 |  |
-| PC19 | I/O/A | 37 | 10 | 20 | 16 | 1 | 24 | 49 |  |
+| PC18 | I/O | 34 | 9 | 19 | 14 | 28 | 25 | 46 | SWDIO |
+| PC19 | I/O/A | 37 | 10 | 20 | 16 | 1 | 24 | 49 | SWCLK |
 | GND | P | 47 | EP | 15 | EP | 7 | EP | 31/63 |  |
 | VDD | P | 48 | 1 | 16 | 1 | 6 | 2 | 32/64 |  |
 
@@ -195,10 +191,10 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PA0 | A0, C1P1, CTS2, T2C1 | - | T2C1 | - | - | - | - |
 | PA1 | A1, C1O, O1N2, O2N2, RTS2, T2C2 | CTS2 | T2C2 | - | - | - | - |
 | PA2 | A2, C3N0, O2O1, T2C3, TX2 | RTS2, T2C3 | - | - | - | T2ET | T2ET |
-| PA3 | A3, A3(3), O1O0, RX2, T2C4 | T2C4 | CTS3 | T3C1 | - | - | - |
+| PA3 | A3, O1O0, RX2, T2C4 | T2C4 | CTS3 | T3C1 | - | - | - |
 | PA4 | A4, CK2, CS, O2O0 | - | RTS3 | T3C2 | - | - | - |
 | PA5 | A5, O2N0, SCK | TX4 | - | - | CTS4 | - | - |
-| PA6 | A, A6, MISO, O1N0, T3C1 | CK4, T1BK | - | - | RTS4 | - | - |
+| PA6 | A6, MISO, O1N0, T3C1 | CK4, T1BK | - | - | RTS4 | - | - |
 | PA7 | A7, MOSI, O2P0, T3C2 | CTS4, T1C1N | - | TX1 | - | - | - |
 | PA8 | RTS4 | MISO | RTS1, RTS4 | - | CK4 | RTS4 | - |
 | PA9 | - | MOSI, RX4, T2BK | CTS1, MISO | T2BK | - | - | - |
@@ -241,7 +237,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PC0 | A10 | - | - | T1C1, TX2 | T2BK | T2C4 | T2C4 |
 | PC1 | A11 | - | - | RX2, T1C2 | T2C1N | - | - |
 | PC2 | A12 | - | - | CTS2, T1C3 | T2C2N | - | - |
-| PC3 | A13, C1N0, C2N1, C3N1 | - | T2C1N | RTS2, T1C4 | RTS2, T2C3N | - | - |
+| PC3 | A13, C1N0, C2N1, C3N1, RST | - | T2C1N | RTS2, T1C4 | RTS2, T2C3N | - | - |
 | PC4 | - | - | - | CS, T1BK | T2ET | - | - |
 | PC5 | - | - | - | SCK, T1C1N | - | - | - |
 | PC6 | - | - | - | MISO, T1C2N | - | - | - |
@@ -300,6 +296,42 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 108 routines in [EVT/EXAM](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM):
 
 [ADC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/ADC) 5 · [APPLICATION](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/APPLICATION) 1 · [DMA](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/DMA) 2 · [EXTI](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/EXTI) 1 · [FLASH](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/FLASH) 2 · [FreeRTOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/FreeRTOS) 1 · [GPIO](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/GPIO) 1 · [HarmonyOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/HarmonyOS) 1 · [I2C](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/I2C) 6 · [IAP](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/IAP) 1 · [INT](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/INT) 1 · [IWDG](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/IWDG) 1 · [OPA](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/OPA) 8 · [PIOC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PIOC) 18 · [PMP](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PMP) 1 · [PWR](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PWR) 5 · [RCC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RCC) 2 · [RT-Thread](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RT-Thread) 2 · [RunInRam](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RunInRam) 1 · [SDI_Printf](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/SDI_Printf) 1 · [SPI](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/SPI) 6 · [TIM](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TIM) 13 · [TOUCHKEY](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TOUCHKEY) 1 · [TencentOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TencentOS) 1 · [USART](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USART) 10 · [USB](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USB) 13 · [USBPD](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USBPD) 2 · [WWDG](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/WWDG) 1
+
+## Documents
+
+| Document | Kind | English | 中文 |
+|---|---|---|---|
+| CH32X035DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) v2.2 | [page](https://www.wch.cn/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) v2.2 |
+| CH32X035RM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035RM.PDF) v1.9 | [page](https://www.wch.cn/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035RM.PDF) v1.9 |
+| CH32X035EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32X035EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT) v2.1 |
+
+### Evaluation boards
+
+- board-manual:en: [CH32X035 Evaluation Board Reference-EN.pdf](https://github.com/ch32-riscv-ug/CH32X035/blob/main/EVT/PUB/CH32X035%20Evaluation%20Board%20Reference-EN.pdf)
+- board-manual:zh: [CH32X035评估板说明书.pdf](https://github.com/ch32-riscv-ug/CH32X035/blob/main/EVT/PUB/CH32X035%E8%AF%84%E4%BC%B0%E6%9D%BF%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)
+- schematic-pdf: [CH32X035SCH.pdf](https://github.com/ch32-riscv-ug/CH32X035/blob/main/EVT/PUB/CH32X035SCH.pdf)
+
+7 board schematics under `EVT/PUB/SCHPCB/`: `CH32X033F8P6-R0`, `CH32X035C8T6_R0`, `CH32X035F7P6-R0`, `CH32X035F8U6-R0`, `CH32X035G8R6-R0`, `CH32X035G8U6-R0`, `CH32X035USBPD_CH211`
+
+## Reference
+
+### Address map
+
+| Region | Base | Kind |
+|---|---|---|
+| APB1PERIPH | `0x40000000` | bus |
+| PERIPH | `0x40000000` | bus |
+| APB2PERIPH | `0x40010000` | bus |
+| AHBPERIPH | `0x40020000` | bus |
+| FLASH | `0x00000000` | link-origin |
+| RAM | `0x20000000` | link-origin |
+| FLASH | `0x08000000` | memory |
+| OB | `0x1ffff800` | memory |
+| SRAM | `0x20000000` | memory |
+
+`link-origin` is what the EVT linker scripts use; the `memory` row for FLASH is the address the device header states. Both windows are real -- CH32V307 answers at `0x08000000` and at `0x00000000`.
+
+Peripheral base addresses are in [memory_map.csv](https://github.com/ch32-riscv-ug/ch32-device-data/blob/main/tables/memory_map.csv); interrupt numbers in [interrupts.csv](https://github.com/ch32-riscv-ug/ch32-device-data/blob/main/tables/interrupts.csv).
 
 ---
 Data: [ch32-device-data](https://github.com/ch32-riscv-ug/ch32-device-data) (tables/ -- each value carries its evidence and confidence there).
