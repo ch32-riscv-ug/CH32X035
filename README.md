@@ -8,6 +8,8 @@ Programming and debug: **2-wire SDI** (WCH-Link, `Serial Debug Interface`).
 
 ### Debug / serial defaults
 
+Where these land **without writing a remap register**. SWD is live at reset; the UART pads are not -- the pin must still be put into alternate-function mode. See `route` in tables/README.ja.md.
+
 | Series | SWDIO | SWCLK | UART TX | UART RX |
 |---|---|---|---|---|
 | CH32X033 | PC18 | PC19 | PA2 (USART2); PB0 (USART4) | PA3 (USART2); PB1 (USART4) |
@@ -82,6 +84,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PB1 | I/O/A | 3 | UART RX (USART4) |
 | PB7 | I/O/A | 4 |  |
 | PC3 | I/O/A | 13 |  |
+| PC10 | I/O | 6 |  |
+| PC11 | I/O | 5 |  |
 | PC16 | I/O/A | 5 |  |
 | PC17 | I/O/A | 6 |  |
 | PC18 | I/O | 8 | SWDIO |
@@ -175,6 +179,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PC5 | I/O | - | - | - | - | - | - | 19 |  |
 | PC6 | I/O | 18 | - | - | - | - | - | 24 |  |
 | PC7 | I/O | 19 | 6 | - | - | - | - | 25 |  |
+| PC10 | I/O | 33 | - | 18 | - | 3 | 27 | 45 |  |
+| PC11 | I/O | 32 | - | 17 | - | 2 | 26 | 44 |  |
 | PC14 | I/O/A | 38 | 11 | 2 | 19 | 4 | 28 | 54 |  |
 | PC15 | I/O/A | 39 | 12 | 3 | 20 | 5 | 1 | 55 |  |
 | PC16 | I/O/A | 32 | 7 | 17 | 17 | 2 | 26 | 44 |  |
