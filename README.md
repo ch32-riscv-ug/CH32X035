@@ -56,7 +56,7 @@ Only the 7 rows that differ between these 7 products; the other 10 are the same 
 | Watchdog | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
 | PDUSB USB Host | √ | - | - | - | √ | √ | √ |
 | USB Device | √ | √ | √ | √ | √ | √ | √ |
-| DRP | √ | √ | √ | √ | √ | √ | √ |
+| Type-C Source Sink DRP | √ | √ | √ | √ | √ | √ | √ |
 | ADC | 10+1 | 5+1 | 11+1 | 10+1 | 11+1 | 12+1 | 14+1 |
 | OPA | 2 | 1 | 1 | 2 | 2 | 2 | 2 |
 | CMP | 3 | - | 1 | - | 3 | 1 | 3 |
@@ -68,18 +68,18 @@ Only the 7 rows that differ between these 7 products; the other 10 are the same 
 
 ## Packages & pinout drawings
 
-Pinout drawings are in the datasheet (chapter *Pinouts*):
+Pinout drawings are in the datasheet (chapter *Pinouts*); each link opens at the page that carries the drawing:
 
 | Package | Products | Datasheet | Outline |
 |---|---|---|---|
-| TSSOP20 | CH32X033F8P6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_TSSOP20.png) |
-| LQFP48 | CH32X035C8T6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP48.png) |
-| QFN12 | CH32X035D8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN12.png) |
-| TSSOP20 | CH32X035F7P6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_TSSOP20.png) |
-| QFN20 | CH32X035F8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN20.png) |
-| QSOP28 | CH32X035G8R6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QSOP28.png) |
-| QFN28 | CH32X035G8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN28.png) |
-| LQFP64M | CH32X035R8T6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP64M.png) |
+| TSSOP20 | CH32X033F8P6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF#page=16) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF#page=15) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_TSSOP20.png) |
+| LQFP48 | CH32X035C8T6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF#page=13) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF#page=12) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP48.png) |
+| QFN12 | CH32X035D8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF#page=15) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF#page=14) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN12.png) |
+| TSSOP20 | CH32X035F7P6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF#page=13) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF#page=12) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_TSSOP20.png) |
+| QFN20 | CH32X035F8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF#page=15) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF#page=14) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN20.png) |
+| QSOP28 | CH32X035G8R6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF#page=14) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF#page=13) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QSOP28.png) |
+| QFN28 | CH32X035G8U6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF#page=14) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF#page=13) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN28.png) |
+| LQFP64M | CH32X035R8T6 | [en](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF#page=12) / [zh](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF#page=11) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP64M.png) |
 
 ## Pin maps & alternate functions
 
