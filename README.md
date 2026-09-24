@@ -326,9 +326,9 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 ## Errata
 
 - ADC channels 3, 7, 11 and 15, and the I2C function, are not available. *(applies: CH32X033, CH32X035; 5th-to-last digit of lot number = 0)*
-- The X0 GPIO block has no general-purpose open-drain output: CNF=01 in output mode drives the pad high like push-pull; only AF open-drain (CNF=11) releases the pad. Open-drain GPIO must be emulated as floating input / push-pull low. *(applies: CH32X033, CH32X035; )*
+- The X0 GPIO block has no general-purpose open-drain output: CNF=01 in output mode drives the pad high like push-pull (ch32-data gpio_x0 describes CNF=01 as "Floating input, no Open Drain output"). Only the AF open-drain mode (CNF=11) releases the pad, and then the peripheral owns it. Open-drain GPIO must be emulated as floating input / push-pull low. *(applies: CH32X033, CH32X035; )*
 - The PC10/PC17 and PC11/PC16 pin pairs are internally bonded together; both IOs of a pair must not be configured as outputs at the same time. *(applies: CH32X033, CH32X035; except CH32X035F8U6 and CH32X035D8U6)*
-- PC16 (UDM) and PC17 (UDP) belong to the USB PHY. While AFIO_CTLR.USB_PHY_V33 (bit 6, reset value 0x45) is set, a GPIO or AF open-drain output on either pad drives high instead of releasing; another device cannot pull the line low. Clear the bit before using the pads as open-drain outputs. *(applies: CH32X033, CH32X035; )*
+- PC16 (UDM) and PC17 (UDP) belong to the USB PHY. While AFIO_CTLR.USB_PHY_V33 (bit 6, part of the reset value 0x45) is set, a GPIO or AF open-drain output on either pad drives high instead of releasing, so another device cannot pull the line low (an I2C target can never ACK). Clear the bit before using the pads as open-drain outputs. *(applies: CH32X033, CH32X035; )*
 
 ## EVT examples
 
