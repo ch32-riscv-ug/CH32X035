@@ -2,7 +2,7 @@
 
 <!-- This file is generated from ch32-riscv-ug/ch32-device-data (index/ + evidence/ + pipeline/build/build_readme.py). Edit there, not here. -->
 
-[Choose a part](#product-comparison) &middot; [Pin viewer](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32X033) &middot; [Pin maps](#pin-maps--alternate-functions) &middot; [Errata](#errata) &middot; [Examples](#evt-examples) &middot; [Documents](#documents) &middot; [Address map](#address-map)
+[Choose a part](#product-comparison) &middot; [Documents](#documents) &middot; [Pin maps](#pin-maps--alternate-functions) &middot; [Pin viewer](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32X033) &middot; [Errata](#errata) &middot; [Examples](#evt-examples) &middot; [Address map](#address-map)
 
 ## Quick start
 
@@ -16,6 +16,11 @@ Where these land **without writing a remap register**. SWD is live at reset; the
 |---|---|---|---|---|
 | CH32X033 | PC18 | PC19 | PA2 (USART2); PB0 (USART4) | PA3 (USART2); PB1 (USART4) |
 | CH32X035 | PC18 | PC19 | PB10 (USART1); PA2 (USART2) | PB11 (USART1); PA3 (USART2) |
+
+### Datasheets and reference manual
+
+- CH32X035DS0.PDF (datasheet): [English](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) · [中文](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF)
+- CH32X035RM.PDF (reference manual): [English](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035RM.PDF) · [中文](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035RM.PDF)
 
 ## Series
 
@@ -65,6 +70,44 @@ Only the 7 rows that differ between these 7 products; the other 10 are the same 
 | PIOC 1-wire interface | √ | √ | √ | √ | √ | √ | √ |
 
 </details>
+
+## Block diagrams
+
+### CH32X033
+
+<details><summary>Internal block diagram (datasheet)</summary>
+
+<img src="image/architecture_CH32X033.png" alt="CH32X033 internal block diagram" />
+
+</details>
+
+### CH32X035
+
+<img src="image/system_CH32X035.jpg" alt="CH32X035 system block diagram" />
+
+System block diagram from the [WCH product page](https://www.wch-ic.com/products/CH32X035.html).
+
+<details><summary>Internal block diagram (datasheet)</summary>
+
+<img src="image/architecture_CH32X035.png" alt="CH32X035 internal block diagram" />
+
+</details>
+
+## Documents
+
+| Document | Kind | English | 中文 |
+|---|---|---|---|
+| CH32X035DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) v2.3 | [page](https://www.wch.cn/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) v2.3 |
+| CH32X035RM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035RM.PDF) v1.9 | [page](https://www.wch.cn/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035RM.PDF) v1.9 |
+| CH32X035EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32X035EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT) v2.2 |
+
+### Evaluation boards
+
+- board-manual:en: [CH32X035 Evaluation Board Reference-EN.pdf](https://ch32-riscv-ug.github.io/CH32X035/EVT/PUB/CH32X035%20Evaluation%20Board%20Reference-EN.pdf)
+- board-manual:zh: [CH32X035评估板说明书.pdf](https://ch32-riscv-ug.github.io/CH32X035/EVT/PUB/CH32X035%E8%AF%84%E4%BC%B0%E6%9D%BF%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)
+- schematic-pdf: [CH32X035SCH.pdf](https://ch32-riscv-ug.github.io/CH32X035/EVT/PUB/CH32X035SCH.pdf)
+
+7 board schematics under `EVT/PUB/SCHPCB/`: `CH32X033F8P-R0`, `CH32X035C8T-R0`, `CH32X035F7P-R0`, `CH32X035F8U-R0`, `CH32X035G8R-R0`, `CH32X035G8U-R0`, `CH32X035USBPD-CH211`
 
 ## Packages & pinout drawings
 
@@ -315,14 +358,6 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 </details>
 
-## Block diagrams
-
-### CH32X033
-<img src="image/architecture_CH32X033.png" alt="CH32X033 block diagram" />
-
-### CH32X035
-<img src="image/architecture_CH32X035.png" alt="CH32X035 block diagram" />
-
 ## Errata
 
 - Only UNIID1 and UNIID2 (the low 64 bits) of the unique ID differ between chips; UNIID3 is not unique although the reference manual describes a 96-bit unique identifier. UNIID3 reads 0xFFFFFFFF on the measured V003, V006, X035 and L103 chips, and the same 0xE339E339 on a V203 and a V307. Use UNIID1|UNIID2 as the chip's unique value. *(applies: CH32L103, CH32V003, CH32V006, CH32V203, CH32V307, CH32X035; )*
@@ -337,22 +372,6 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 109 routines in [EVT/EXAM](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM):
 
 [ADC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/ADC) 5 · [APPLICATION](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/APPLICATION) 1 · [DMA](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/DMA) 2 · [EXTI](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/EXTI) 1 · [FLASH](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/FLASH) 2 · [FreeRTOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/FreeRTOS) 1 · [GPIO](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/GPIO) 1 · [HarmonyOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/HarmonyOS) 1 · [I2C](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/I2C) 6 · [IAP](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/IAP) 1 · [INT](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/INT) 1 · [IWDG](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/IWDG) 1 · [OPA](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/OPA) 8 · [PIOC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PIOC) 18 · [PMP](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PMP) 1 · [PWR](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/PWR) 5 · [RCC](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RCC) 2 · [RT-Thread](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RT-Thread) 2 · [RunInRam](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/RunInRam) 1 · [SDI_Printf](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/SDI_Printf) 1 · [SPI](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/SPI) 6 · [TIM](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TIM) 13 · [TOUCHKEY](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TOUCHKEY) 1 · [TencentOS](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/TencentOS) 1 · [USART](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USART) 10 · [USB](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USB) 13 · [USBPD](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/USBPD) 3 · [WWDG](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT/EXAM/WWDG) 1
-
-## Documents
-
-| Document | Kind | English | 中文 |
-|---|---|---|---|
-| CH32X035DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) v2.3 | [page](https://www.wch.cn/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) v2.3 |
-| CH32X035RM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035RM.PDF) v1.9 | [page](https://www.wch.cn/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035RM.PDF) v1.9 |
-| CH32X035EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32X035EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT) v2.2 |
-
-### Evaluation boards
-
-- board-manual:en: [CH32X035 Evaluation Board Reference-EN.pdf](https://github.com/ch32-riscv-ug/CH32X035/blob/main/EVT/PUB/CH32X035%20Evaluation%20Board%20Reference-EN.pdf)
-- board-manual:zh: [CH32X035评估板说明书.pdf](https://github.com/ch32-riscv-ug/CH32X035/blob/main/EVT/PUB/CH32X035%E8%AF%84%E4%BC%B0%E6%9D%BF%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)
-- schematic-pdf: [CH32X035SCH.pdf](https://github.com/ch32-riscv-ug/CH32X035/blob/main/EVT/PUB/CH32X035SCH.pdf)
-
-7 board schematics under `EVT/PUB/SCHPCB/`: `CH32X033F8P-R0`, `CH32X035C8T-R0`, `CH32X035F7P-R0`, `CH32X035F8U-R0`, `CH32X035G8R-R0`, `CH32X035G8U-R0`, `CH32X035USBPD-CH211`
 
 ## Reference
 
