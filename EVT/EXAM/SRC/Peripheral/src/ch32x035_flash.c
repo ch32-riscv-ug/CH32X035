@@ -1,8 +1,8 @@
 /********************************** (C) COPYRIGHT  *******************************
  * File Name          : ch32x035_flash.c
  * Author             : WCH
- * Version            : V1.0.3
- * Date               : 2026/08/18
+ * Version            : V1.0.5
+ * Date               : 2026/11/05
  * Description        : This file provides all the FLASH firmware functions.
 *********************************************************************************
 * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
@@ -62,7 +62,6 @@
 /* FLASH Size */
 #define Size_256B                  0x100
 #define Size_1KB                   0x400
-#define Size_32KB                  0x8000
 
 /********************************************************************************
   * @fn            FLASH_SetLatency
@@ -700,7 +699,7 @@ void FLASH_ErasePage_Fast(uint32_t Page_Address)
  * @brief   Erases a specified FLASH Block (1Block = 32KByte).
  *
  * @param   Block_Address - The block address to be erased.
- *
+ *			note: The current function is only supported when the read protection is disabled.
  * @return  none
  */
 void FLASH_EraseBlock_32K_Fast(uint32_t Block_Address)
@@ -771,7 +770,7 @@ void SystemReset_StartMode(uint32_t Mode)
  * @param   StartAddr - Erases Flash start address(StartAddr%256 == 0).
  *          Cnt - Erases count.
  *          Erase_Size - Erases size select.The returned value can be:
- *          Size_32KB, Size_1KB, Size_256B.
+ *          Size_1KB, Size_256B.
  *
  * @return  none.
  */
@@ -780,11 +779,7 @@ static void ROM_ERASE(uint32_t StartAddr, uint32_t Cnt, uint32_t Erase_Size)
 	FLASH->CTLR &= (CR_OPTER_Reset & CR_PAGE_ER_Reset);
 
     do{
-        if(Erase_Size == Size_32KB)
-        {
-            FLASH->CTLR |= CR_BER32;
-        }
-        else if(Erase_Size == Size_1KB)
+        if(Erase_Size == Size_1KB)
         {
             FLASH->CTLR |= CR_PER_Set;
         }
@@ -798,12 +793,7 @@ static void ROM_ERASE(uint32_t StartAddr, uint32_t Cnt, uint32_t Erase_Size)
         while(FLASH->STATR & SR_BSY)
             ;
 
-        if(Erase_Size == Size_32KB)
-        {
-            FLASH->CTLR &= ~CR_BER32;
-            StartAddr += Size_32KB;
-        }
-        else if(Erase_Size == Size_1KB)
+        if(Erase_Size == Size_1KB)
         {
             FLASH->CTLR &= ~CR_PER_Set;
             StartAddr += Size_1KB;
@@ -839,7 +829,7 @@ FLASH_Status FLASH_ROM_ERASE(uint32_t StartAddr, uint32_t Length)
         return FLASH_ADR_RANGE_ERROR;
     }
 
-    if((StartAddr + Length) > ValidAddrEnd)
+    if(Length > (ValidAddrEnd - StartAddr))
     {
         return FLASH_OP_RANGE_ERROR;
     }
@@ -859,13 +849,7 @@ FLASH_Status FLASH_ROM_ERASE(uint32_t StartAddr, uint32_t Length)
 
     Addr0 = StartAddr;
 
-    if(Length >= Size_32KB)
-    {
-        Length0 = Size_32KB - (Addr0 & (Size_32KB - 1));
-        Addr1 = StartAddr + Length0;
-        Length1 = Length - Length0;
-    }
-    else if(Length >= Size_1KB)
+    if(Length >= Size_1KB)
     {
         Length0 = Size_1KB - (Addr0 & (Size_1KB - 1));
         Addr1 = StartAddr + Length0;
@@ -874,40 +858,6 @@ FLASH_Status FLASH_ROM_ERASE(uint32_t StartAddr, uint32_t Length)
     else if(Length >= Size_256B)
     {
         Length0 = Length;
-    }
-
-    /* Erase 32KB */
-    if(Length0 >= Size_32KB)//front
-    {
-        Length = Length0;
-        if(Addr0 & (Size_32KB - 1))
-        {
-            Length0 = Size_32KB - (Addr0 & (Size_32KB - 1));
-        }
-        else
-        {
-            Length0 = 0;
-        }
-
-        ROM_ERASE((Addr0 + Length0), ((Length - Length0) >> 15), Size_32KB);
-    }
-
-    if(Length1 >= Size_32KB)//back
-    {
-        StartAddr = Addr1;
-        Length = Length1;
-
-        if((Addr1 + Length1) & (Size_32KB - 1))
-        {
-            Addr1 = ((StartAddr + Length1) & (~(Size_32KB - 1)));
-            Length1 = (StartAddr + Length1) & (Size_32KB - 1);
-        }
-        else
-        {
-            Length1 = 0;
-        }
-
-        ROM_ERASE(StartAddr, ((Length - Length1) >> 15), Size_32KB);
     }
 
     /* Erase 1KB */
@@ -986,7 +936,7 @@ FLASH_Status FLASH_ROM_WRITE(uint32_t StartAddr, uint32_t *pbuf, uint32_t Length
         return FLASH_ADR_RANGE_ERROR;
     }
 
-    if((StartAddr + Length) > ValidAddrEnd)
+    if(Length > (ValidAddrEnd - StartAddr))
     {
         return FLASH_OP_RANGE_ERROR;
     }
