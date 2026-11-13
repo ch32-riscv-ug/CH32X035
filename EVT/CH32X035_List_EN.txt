@@ -28,6 +28,9 @@ Directory
   |      |      |      |      |-- ExtLines_Trigger: external lines trigger ADC conversion routine
   |      |      |      |-- APPLICATION
   |      |      |      |      |-- WS2812_LED: Operating WS2812 via SPI\PWM Routine
+  |      |      |      |      |-- WCHGUI
+  |      |      |      |      |      |-- WCH-GUI-FLASH: GUI FLASH
+  |      |      |      |      |      |-- WCH-GUI-LIVE: GUI LIVE
   |      |      |      |-- DMA
   |      |      |      |      |-- DMA_MEM2MEM: Memory to memory mode routine
   |      |      |      |      |-- DMA_MEM2PERIP: Memory to peripheral mode, and peripheral to memory mode routine, see peripheral sub-routines

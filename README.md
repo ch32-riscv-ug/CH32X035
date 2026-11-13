@@ -99,7 +99,7 @@ System block diagram from the [WCH product page](https://www.wch-ic.com/products
 |---|---|---|---|
 | CH32X035DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035DS0.PDF) v2.3 | [page](https://www.wch.cn/downloads/CH32X035DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035DS0.PDF) v2.3 |
 | CH32X035RM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_en/CH32X035RM.PDF) v1.9 | [page](https://www.wch.cn/downloads/CH32X035RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32X035/datasheet_zh/CH32X035RM.PDF) v2.0 |
-| CH32X035EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32X035EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT) v2.3 |
+| CH32X035EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32X035EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32X035/tree/main/EVT) v2.31 |
 | CHRISC8B.PDF | core-manual | [mirror](https://ch32-riscv-ug.github.io/CH32X035/EVT/EXAM/PIOC/Tool_Manual/Manual/CHRISC8B-EN.pdf) v2B | [mirror](https://ch32-riscv-ug.github.io/CH32X035/EVT/EXAM/PIOC/Tool_Manual/Manual/CHRISC8B.PDF) v2B |
 | PIOC.PDF | core-manual | [mirror](https://ch32-riscv-ug.github.io/CH32X035/EVT/EXAM/PIOC/Tool_Manual/Manual/PIOC-EN.pdf) v1.0 | [mirror](https://ch32-riscv-ug.github.io/CH32X035/EVT/EXAM/PIOC/Tool_Manual/Manual/PIOC.PDF) v1.1 |
 
