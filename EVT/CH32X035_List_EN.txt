@@ -28,9 +28,6 @@ Directory
   |      |      |      |      |-- ExtLines_Trigger: external lines trigger ADC conversion routine
   |      |      |      |-- APPLICATION
   |      |      |      |      |-- WS2812_LED: Operating WS2812 via SPI\PWM Routine
-  |      |      |      |      |-- WCHGUI
-  |      |      |      |      |      |-- WCH-GUI-FLASH: GUI FLASH
-  |      |      |      |      |      |-- WCH-GUI-LIVE: GUI LIVE
   |      |      |      |-- DMA
   |      |      |      |      |-- DMA_MEM2MEM: Memory to memory mode routine
   |      |      |      |      |-- DMA_MEM2PERIP: Memory to peripheral mode, and peripheral to memory mode routine, see peripheral sub-routines
@@ -43,6 +40,19 @@ Directory
   |      |      |      |      |-- FreeRTOS_Core: FreeRTOS migration routines
   |      |      |      |-- GPIO
   |      |      |      |      |-- GPIO_Toggle: GPIO routines 
+  |      |      |      |-- GUI
+  |      |      |      |      |-- WCH-GUI-FLASH：WCH-GUI-FLASH routine(Low CPU usage) 
+  |      |      |      |      |      |--GUI_ExternalFlash: WCH-GUI-FLASH use external flash routine
+  |      |      |      |      |      |--GUI_Onflash：WCH-GUI-FLASH use internal flash routine
+  |      |      |      |      |      |--WCHGUI_Lib: WCH-GUI-FLASH core library (with low CPU usage)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--Instructions for downloading external FLASH.pdf
+  |      |      |      |      |      |      |--WCHGUI software documentation.pdf
+  |      |      |      |      |-- WCH-GUI-LIVE：WCH-GUI-LIVE routine(Save storage resources)
+  |      |      |      |      |      |--DEMO1: WCH-GUI-LIVE basic routine
+  |      |      |      |      |      |--WVUI_Lib: WCH-GUI-LIVE core library(with save storage resources)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--WCH-GUI-Live library Reference Manual.pdf 
   |      |      |      |-- HarmonyOS
   |      |      |      |      |-- LiteOS_m: HarmonyOS migration routine
   |      |      |      |-- I2C

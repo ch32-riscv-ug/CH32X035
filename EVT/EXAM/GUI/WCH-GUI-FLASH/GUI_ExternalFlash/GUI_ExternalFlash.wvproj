@@ -1,6 +1,6 @@
 {
 	"version": "1.0",
-	"hasAllParsed": true,
+	"hasAllParsed": false,
 	"isNormalMRSProject": true,
 	"basic": {
 		"chipInfo": {
@@ -22,28 +22,28 @@
 		},
 		"linkedFolders": [
 			{
+				"name": "WCHGUI_Lib",
+				"location": "../WCHGUI_Lib"
+			},
+			{
 				"name": "Core",
-				"location": "../../../../SRC/Core"
+				"location": "../../../SRC/Core"
 			},
 			{
 				"name": "Debug",
-				"location": "../../../../SRC/Debug"
+				"location": "../../../SRC/Debug"
 			},
 			{
 				"name": "Ld",
-				"location": "../../../../SRC/Ld"
+				"location": "../../../SRC/Ld"
 			},
 			{
 				"name": "Peripheral",
-				"location": "../../../../SRC/Peripheral"
+				"location": "../../../SRC/Peripheral"
 			},
 			{
 				"name": "Startup",
-				"location": "../../../../SRC/Startup"
-			},
-			{
-				"name": "WCHGUI_Lib",
-				"location": "../WCHGUI_Lib"
+				"location": "../../../SRC/Startup"
 			}
 		],
 		"removedResources": [
@@ -73,7 +73,7 @@
 				"name": "*.tar"
 			}
 		],
-		"projectName": "GUI_Onflash",
+		"projectName": "GUI_ExternalFlash",
 		"architecture": "RISC-V",
 		"projectType": "c"
 	},
@@ -180,10 +180,9 @@
 							"${project}/User",
 							"${project}/Peripheral/inc",
 							"${project}/User/Drivers",
-							"${project}/User/wui",
+							"${project}/WCHGUI_Lib",
 							"${project}/User/wui_port",
-							"${project}/User/wui_user",
-							"${project}/WCHGUI_Lib"
+							"${project}/User/wui_user"
 						],
 						"include_system_paths": [],
 						"include_files": []
@@ -378,7 +377,7 @@
 	"flashConfig": {
 		"mcutype": "CH32X035",
 		"address": "0x08000000",
-		"target_path": "obj/GUI_Onflash.hex",
+		"target_path": "obj/GUI_ExternalFlash.hex",
 		"clkSpeed": "High",
 		"debug_interface_mode": "1-wire serial",
 		"erase": true,
@@ -404,7 +403,7 @@
 			"configOptions": [
 				"-f \"${WCH:OpenOCD:default}/bin/wch-riscv.cfg\""
 			],
-			"host": "localhost",
+			"host": "127.0.0.1",
 			"port": 3333,
 			"skipDownloadBeforeDebug": false,
 			"enablePageEraser": false,
@@ -459,8 +458,8 @@
 			"showDebugOutputTimestamps": true
 		},
 		"reserve": {
-			"PROGRAM_NAME": "obj/GUI_Onflash.elf",
-			"PROJECT_ATTR": "GUI_Onflash",
+			"PROGRAM_NAME": "obj/GUI_ExternalFlash.elf",
+			"PROJECT_ATTR": "GUI_ExternalFlash",
 			"PROJECT_BUILD_CONFIG_AUTO_ATTR": true,
 			"PROJECT_BUILD_CONFIG_ID_ATTR": "",
 			"ATTR_BUILD_BEFORE_LAUNCH_ATTR": 2,
