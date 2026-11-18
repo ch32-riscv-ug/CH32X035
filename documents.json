@@ -57,13 +57,13 @@
       "sources": {
         "en": {
           "file_id": 382,
-          "version": "1.9",
-          "scope": "CH32X035"
+          "version": "2.0",
+          "scope": "CH32X035, CH32X035R8T6, CH32X035C8T6, CH32X035G8U6, CH32X035G8R6, CH32X035F8U6, CH32X035F7P6, CH32X035D8U6, CH32X033F8P6"
         },
         "zh": {
           "file_id": 445,
           "version": "2.0",
-          "scope": "CH32X035"
+          "scope": "CH32X035, CH32X035R8T6, CH32X035C8T6, CH32X035G8U6, CH32X035G8R6, CH32X035F8U6, CH32X035F7P6, CH32X035D8U6, CH32X033F8P6"
         }
       }
     }
