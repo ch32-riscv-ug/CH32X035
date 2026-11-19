@@ -340,7 +340,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | CH32X033 | I2C1_REMAP | PCFR1 | PCFR1:2;PCFR1:3;PCFR1:4 | 0;1;2;3;4;5;6;7 | 0 |
 | CH32X033 | PIOC_REMAP | PCFR1 | PCFR1:23 | 0;1 | 0 |
 | CH32X033 | SPI1_REMAP | PCFR1 | PCFR1:0;PCFR1:1 | 0;1;2;3 | 0 |
-| CH32X033 | TIM1_REMAP | PCFR1 | PCFR1:15;PCFR1:16;PCFR1:17 | 0;1;2;3;4 | 0 |
+| CH32X033 | TIM1_REMAP | PCFR1 | PCFR1:15;PCFR1:16;PCFR1:17 | 0;1;2;3;4;5;6;7 | 0 |
 | CH32X033 | TIM2_REMAP | PCFR1 | PCFR1:18;PCFR1:19;PCFR1:20 | 0;1;2;3;4;5;6;7 | 0 |
 | CH32X033 | TIM3_REMAP | PCFR1 | PCFR1:21;PCFR1:22 | 0;1;2;3 | 0 |
 | CH32X033 | USART1_REMAP | PCFR1 | PCFR1:5;PCFR1:6 | 0;1;2;3 | 0 |
@@ -350,7 +350,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | CH32X035 | I2C1_REMAP | PCFR1 | PCFR1:2;PCFR1:3;PCFR1:4 | 0;1;2;3;4;5;6;7 | 0 |
 | CH32X035 | PIOC_REMAP | PCFR1 | PCFR1:23 | 0;1 | 0 |
 | CH32X035 | SPI1_REMAP | PCFR1 | PCFR1:0;PCFR1:1 | 0;1;2;3 | 0 |
-| CH32X035 | TIM1_REMAP | PCFR1 | PCFR1:15;PCFR1:16;PCFR1:17 | 0;1;2;3;4 | 0 |
+| CH32X035 | TIM1_REMAP | PCFR1 | PCFR1:15;PCFR1:16;PCFR1:17 | 0;1;2;3;4;5;6;7 | 0 |
 | CH32X035 | TIM2_REMAP | PCFR1 | PCFR1:18;PCFR1:19;PCFR1:20 | 0;1;2;3;4;5;6;7 | 0 |
 | CH32X035 | TIM3_REMAP | PCFR1 | PCFR1:21;PCFR1:22 | 0;1;2;3 | 0 |
 | CH32X035 | USART1_REMAP | PCFR1 | PCFR1:5;PCFR1:6 | 0;1;2;3 | 0 |
@@ -390,6 +390,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | FLASH | `0x08000000` | memory |
 | OB | `0x1ffff800` | memory |
 | SRAM | `0x20000000` | memory |
+| PIOC_SRAM | `0x20004000` | memory |
 
 `link-origin` is what the EVT linker scripts use; the `memory` row for FLASH is the address the device header states. Both windows are real -- CH32V307 answers at `0x08000000` and at `0x00000000`.
 
